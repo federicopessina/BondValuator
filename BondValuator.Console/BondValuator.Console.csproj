@@ -9,12 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.10" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Input\" />
     <Folder Include="Data\Output\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BondValuator.Core\BondValuator.Core.csproj" />
   </ItemGroup>
 
 </Project>
