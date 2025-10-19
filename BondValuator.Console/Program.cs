@@ -87,7 +87,32 @@ try
     }
 
     // ----------------------
-    // 6. Load CSV and calculate PV
+    // 6. Validate CSV
+    // ----------------------
+    logger.LogInformation("Validating input CSV...");
+    LogToFile("Validating input CSV...");
+
+    var validationIssues = CsvValidator.ValidateFile(inputPath);
+
+    if (validationIssues.Count > 0)
+    {
+        logger.LogWarning("⚠️ CSV validation found {Count} issue(s).", validationIssues.Count);
+        LogToFile($"⚠️ CSV validation found {validationIssues.Count} issue(s).");
+
+        foreach (var issue in validationIssues)
+        {
+            logger.LogWarning(issue);
+            LogToFile(issue);
+        }
+    }
+    else
+    {
+        logger.LogInformation("✅ CSV validation passed with no issues.");
+        LogToFile("✅ CSV validation passed with no issues.");
+    }
+
+    // ----------------------
+    // 7. Load CSV and calculate PV
     // ----------------------
     logger.LogInformation("Loading input CSV...");
     LogToFile("Loading input CSV...");
@@ -102,7 +127,7 @@ try
         .ToList();
 
     // ----------------------
-    // 7. Write output CSV
+    // 8. Write output CSV
     // ----------------------
     CsvWriter.WriteResults(outputPath, results, rounding);
 
