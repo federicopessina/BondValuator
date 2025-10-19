@@ -1,8 +1,5 @@
-﻿using Xunit;
-using FluentAssertions;
-using BondValuator.Core.Models;
+﻿using FluentAssertions;
 using BondValuator.Core.Services;
-using System.IO;
 
 namespace BondValuator.UnitTests
 {

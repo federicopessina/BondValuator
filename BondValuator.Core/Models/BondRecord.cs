@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BondValuator.Core.Models
+﻿namespace BondValuator.Core.Models
 {
     public class BondRecord
     {

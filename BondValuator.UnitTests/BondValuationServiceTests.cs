@@ -1,5 +1,4 @@
-﻿using Xunit;
-using FluentAssertions;
+﻿using FluentAssertions;
 using BondValuator.Core.Services;
 using BondValuator.Core.Models;
 

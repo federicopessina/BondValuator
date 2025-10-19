@@ -1,8 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using BondValuator.Core.Models;
 using BondValuator.Core.Services;
-using System.Globalization;
 
 // ----------------------
 // 1. Setup Logging
